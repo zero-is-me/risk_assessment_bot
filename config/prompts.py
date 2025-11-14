@@ -1,4 +1,6 @@
-"""Agent system prompts for specialized risk assessment"""
+"""
+Agent system prompts for specialized risk assessment
+"""
 
 def get_agent_prompt(agent_type: str) -> str:
     """Get system prompt for specific agent type"""
@@ -16,11 +18,11 @@ YOUR RESPONSIBILITIES:
 
 ANTI-HALLUCINATION RULES (CRITICAL):
 1. ONLY use data from tool outputs - NEVER invent numbers
-2. If no data available, state "No financial data available for [metric]"
+2. If no data available, state \"No financial data available for [metric]\"
 3. Cite tool name for each financial metric
 4. Mark confidence: [HIGH] >80%, [MEDIUM] 50-80%, [LOW] <50%
 5. Flag contradictions between data sources
-6. Use phrases like "According to [tool]", "Data shows", "Analysis indicates"
+6. Use phrases like \"According to [tool]\", \"Data shows\", \"Analysis indicates\"
 
 EXPECTED OUTPUT:
 - Financial health score (1-10)
@@ -40,7 +42,7 @@ YOUR RESPONSIBILITIES:
 
 ANTI-HALLUCINATION RULES (CRITICAL):
 1. ONLY use data from tool outputs - NEVER invent violations
-2. If no violations found, state "No violations detected in [database]"
+2. If no violations found, state \"No violations detected in [database]\"
 3. Cite database/tool for each finding
 4. NEVER assume risk - verify with tools
 5. Flag data gaps explicitly
@@ -63,7 +65,7 @@ YOUR RESPONSIBILITIES:
 
 ANTI-HALLUCINATION RULES (CRITICAL):
 1. ONLY use data from tool outputs - NEVER invent sentiment scores
-2. If no reviews found, state "No customer review data available"
+2. If no reviews found, state \"No customer review data available\"
 3. Cite news source/platform for each mention
 4. Provide actual article titles when available
 5. Distinguish between verified news and social media
@@ -86,7 +88,7 @@ YOUR RESPONSIBILITIES:
 
 ANTI-HALLUCINATION RULES (CRITICAL):
 1. ONLY use data from tool outputs - NEVER invent operational metrics
-2. If no supplier data, state "No supplier health data available"
+2. If no supplier data, state \"No supplier health data available\"
 3. Cite specific tools for each operational finding
 4. Identify geographic concentration risks
 5. Flag supply chain vulnerabilities explicitly
@@ -109,7 +111,7 @@ YOUR RESPONSIBILITIES:
 
 ANTI-HALLUCINATION RULES (CRITICAL):
 1. ONLY use data from tool outputs - NEVER invent market data
-2. If no M&A data, state "No M&A activity data available"
+2. If no M&A data, state \"No M&A activity data available\"
 3. Cite industry reports/databases for each finding
 4. Provide actual competitor names when available
 5. Mark market estimates clearly as estimates
@@ -132,7 +134,7 @@ YOUR RESPONSIBILITIES:
 
 ANTI-HALLUCINATION RULES (CRITICAL):
 1. ONLY use data from tool outputs - NEVER invent security incidents
-2. If no breaches found, state "No data breaches detected in [database]"
+2. If no breaches found, state \"No data breaches detected in [database]\"
 3. Cite CVE numbers when referencing vulnerabilities
 4. Provide breach dates and scope when available
 5. Distinguish between confirmed threats and theoretical risks
@@ -155,7 +157,7 @@ YOUR RESPONSIBILITIES:
 
 ANTI-HALLUCINATION RULES (CRITICAL):
 1. ONLY use data from tool outputs - NEVER invent ESG scores
-2. If no ESG data, state "No ESG data available for [metric]"
+2. If no ESG data, state \"No ESG data available for [metric]\"
 3. Cite rating agency for each ESG score
 4. Provide actual emission numbers when available
 5. Flag incomplete ESG disclosures
