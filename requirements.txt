@@ -1,42 +1,33 @@
-# Core Dependencies
-langchain==0.1.0
-langchain-openai==0.0.5
-langchain-community==0.0.13
-openai==1.12.0
+# Core Framework
+langchain>=0.1.0
+langchain-openai>=0.0.5
+openai>=1.12.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
 
-# Web Framework
-fastapi==0.109.2
-uvicorn[standard]==0.27.1
-pydantic==2.6.1
-pydantic-settings==2.1.0
-
-# Async HTTP
-aiohttp==3.9.3
-httpx==0.26.0
+# Async & HTTP
+aiohttp>=3.9.0
+asyncio>=3.4.3
+httpx>=0.25.0
 
 # Database
-neo4j==5.17.0
-redis==5.0.1
-psycopg2-binary==2.9.9
+neo4j>=5.14.0
+redis>=5.0.0
+psycopg2-binary>=2.9.0
+
+# API Framework
+fastapi>=0.109.0
+uvicorn[standard]>=0.25.0
 
 # Data Processing
-pandas==2.2.0
-numpy==1.26.4
-python-dateutil==2.8.2
+pandas>=2.0.0
+numpy>=1.24.0
+python-dateutil>=2.8.0
 
 # Utilities
-python-dotenv==1.0.1
-pyyaml==6.0.1
-requests==2.31.0
+python-dotenv>=1.0.0
+tenacity>=8.2.0
 
 # Testing
-pytest==8.0.0
-pytest-asyncio==0.23.4
-pytest-cov==4.1.0
-
-# Logging & Monitoring
-loguru==0.7.2
-
-# Optional API Keys (install as needed)
-# finnhub-python==2.4.19
-# alpha-vantage==2.3.1
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
